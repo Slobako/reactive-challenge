@@ -5,3 +5,6 @@ Using Xcode 8 and Swift 3.0, write a networked application which can fetch resou
  
 [1] http://jsonplaceholder.typicode.com 
 [2] https://github.com/jasonranderson/ReactiveJSON
+
+Note:
+Project has been created in Xcode 9 with Swift 4.0. I assume that might have been the reason for difficulties importing the ReactiveJSON framework. It builds successfully despite constantly displaying errors "use of undeclared type xxxxx" or "type yyyyy has no member request" etc.

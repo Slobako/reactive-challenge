@@ -1,0 +1,3 @@
+
+github "KevinVitale/Network" "master"
+github "ReactiveCocoa/ReactiveCocoa" ~> 6.0

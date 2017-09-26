@@ -17,9 +17,10 @@ struct JSONPlaceholder: Singleton, ServiceHost {
     private(set) static var shared = Instance()
 
     // protocol: ServiceHost
-    static var scheme: String { return "http" }
+    static var scheme: String { return "https" }
     static var host: String { return "jsonplaceholder.typicode.com" }
     static var path: String? { return nil }
     
 }
+
 

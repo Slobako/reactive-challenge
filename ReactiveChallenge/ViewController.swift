@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import ReactiveJSON
+import ReactiveSwift
+import Result
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+        performRequest()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +24,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func performRequest() {
+        
+        JSONPlaceholder
+            .request(endpoint: "users")
+            .startWithResult { (result: Result<[Any], NetworkError>) in
+                switch result {
+                case .success:
+                    print(result)
+                case .failure:
+                    print("error")
+                }
+        }
+    }
+    
 }
 

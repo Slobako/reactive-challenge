@@ -16,7 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        performRequest()
+        performRequestFor(endpoint: "users")
+        
+        performRequestFor(endpoint: "posts")
+        
+        performRequestFor(endpoint: "comments")
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,10 +28,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func performRequest() {
+    func performRequestFor(endpoint: String) {
         
         JSONPlaceholder
-            .request(endpoint: "users")
+            .request(endpoint: endpoint)
             .startWithResult { (result: Result<[Any], NetworkError>) in
                 switch result {
                 case .success:
@@ -37,6 +41,8 @@ class ViewController: UIViewController {
                 }
         }
     }
+    
+    
     
 }
 

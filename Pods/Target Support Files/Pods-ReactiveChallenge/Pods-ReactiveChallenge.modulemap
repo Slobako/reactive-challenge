@@ -1,0 +1,6 @@
+framework module Pods_ReactiveChallenge {
+  umbrella header "Pods-ReactiveChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
